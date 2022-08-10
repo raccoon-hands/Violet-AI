@@ -11,6 +11,7 @@ import numpy as np
 #Hope I'm not too late to answer.. But you can just create a new tag,
 #such as "noanswer", have the patterns array empty, and then populate
 #the responses array however you want.
+
 import sys
 import tensorflow as tf
 
