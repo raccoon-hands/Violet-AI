@@ -2,7 +2,7 @@
 #Source: https://www.malwarebytes.com/glossary
 #Some entries have been edited.
 
-malware = {'Abandonware':'Abandonware is software that is shelved by its developer. As such, it is no longer updated \
+cybersecurity = {'Abandonware':'Abandonware is software that is shelved by its developer. As such, it is no longer updated \
 nor supported so it may be rife with vulnerabilities.',\
 
 'Account harvesting':'Account harvesting is the process of gathering user accounts from a system, service, \

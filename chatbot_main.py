@@ -1,24 +1,18 @@
 #Building the actual chatbot
-import random
 import json
 import pickle
 import numpy as np
-
-#These imports were for troubleshooting, ignore them
-#from keras import backend as K
-#from numpy import reshape
-
-#Hope I'm not too late to answer.. But you can just create a new tag,
-#such as "noanswer", have the patterns array empty, and then populate
-#the responses array however you want.
-
 import sys
 import tensorflow as tf
-
 import nltk
 from nltk.stem import WordNetLemmatizer
-
 from tensorflow.keras.models import load_model
+import actions
+from dictionaries import cybersecurity, ccna
+import random
+
+subject = ""
+function = "chat"
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open("intents.json").read())
@@ -63,45 +57,65 @@ def predict_class(sentence):
     return return_list
 
 def get_response(intents_list, intents_json):
+    global subject
+    global function
+    
     tag = intents_list[0]["intent"]
     list_of_intents = intents_json["intents"]
     
     for i in list_of_intents:
-        #function code here probably?
-        #if i["tag"] == the tag which triggers the function
-            #execute function
-            #function = "func"
-            #break
+        #Is the tag a subject?
         if i["tag"] == tag:
-            result = random.choice(i['responses'])
-            #function = "chat"
-            break
+            if i["tag"] == "cyber":
+                subject = cybersecurity
+            elif i["tag"] == "ccna":
+                subject = ccna
+              
+        #Is the tag an action & has a subject been chosen?
+            if ((i["tag"] == "flashcard") or (i["tag"] == "lookup")) and (subject == ""):
+                result = "You haven't told me which subject you'd like to revise yet."
+                break
+        
+            elif (i["tag"] == "lookup") and (subject != ""):
+                result = "lookup"
+                function = "action"
+                break
+        
+            elif (i["tag"] == "flashcard") and (subject != ""):
+                result = "flashcard"
+                function = "action"
+                break
+        
+        
+        #Is the tag a normal response?
+            else:
+                result = random.choice(i['responses'])
+                function = "chat"
+                break
+            
     return result
 
-print("Chatbot is running")
+print("Violet is running. Say hello!")
 
 while True:
-    #will need to switch between while loops for
-    #function mode vs chat bot mode??
-    message = input("")
-    ints = predict_class(message)
-    res = get_response(ints, intents)
-    print(res)
-    
-
-
-
-
-"""
-while True:
-    while Function == "chat":
+    #chat mode
+    while function == "chat":
         message = input("")
         ints = predict_class(message)
         res = get_response(ints, intents)
-        print(res)
+        if (res != "lookup") and (res != "flashcard"):
+            print(f"\n{res}\n")
         break
+        
+    #action mode
+    while function == "action":    
+        if res == "lookup":
+            actions.lookup(subject)
+            function = "chat"
+            break
+            
+        elif res == "flashcard":
+            actions.flashcard(subject)
+            function = "chat"
+            break
 
-    while Function == "txtbox":
-        execute function
-        break
-"""

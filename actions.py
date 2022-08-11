@@ -9,7 +9,7 @@ def flashcard(subject):
     to define it. Show the definition
     when the user presses return.    
     """
-    print("Let's look at some flashcards! Let me know when you want to stop.")
+    print("Let me know when you want to stop using the flashcards.")
     a_dict = subject
     exit = False
 
@@ -21,8 +21,8 @@ def flashcard(subject):
         exit = input('\nPress return for a new flashcard:')
 
     print("\nAlright, I've put the flashcards away.")
-
-
+    return
+    
 def lookup(subject):
     """
     Ask the user for a term, then look
@@ -50,7 +50,7 @@ def lookup(subject):
         elif a_key == 'end':
             print("\nOkay, I've put away the dictionary.")
             exit = True
-
+            
         else:
             print("I don't seem to know that term. Please check your spelling and try again.")
         
