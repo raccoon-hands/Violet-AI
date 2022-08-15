@@ -73,6 +73,8 @@ def get_response(intents_list, intents_json):
                 subject = cybersecurity
             elif i["tag"] == "ccna":
                 subject = ccna
+            #elif i["tag"] == "subjectname":     UNCOMMENT AND ADD YOUR SUBJECT HERE
+                #subject = subjectname
               
         #Is the tag an action & has a subject been chosen?
             if ((i["tag"] == "flashcard") or (i["tag"] == "lookup")) and (subject == ""):
@@ -118,6 +120,8 @@ while True:
             break
             
         elif res == "flashcard":
+            print("\nPress return to see a random word. See if you can define it in your head, then press \
+enter to reveal the definition!")
             actions.flashcard(subject)
             function = "chat"
             break

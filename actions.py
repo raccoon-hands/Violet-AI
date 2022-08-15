@@ -6,16 +6,16 @@ from random import *
 def flashcard(subject):
     """
     Show the user a random key and ask them
-    to define it. Show the definition
+    to think of the definition. Show the definition
     when the user presses return.    
     """
-    print("Let me know when you want to stop using the flashcards.")
+    print("\nTell me when you want to stop using the flashcards.")
     a_dict = subject
     exit = False
 
     while not exit:
         random_key = choice(list(a_dict))
-        print('\nDefine: ', random_key)
+        print('\nYour term is: ', random_key)
         exit = input('\nPress return to see the definition:')
         print('\nThe definition is: ' + a_dict[random_key])
         exit = input('\nPress return for a new flashcard:')
@@ -36,7 +36,7 @@ def lookup(subject):
         newkey = re.sub('[^A-Za-z0-9]+', '', key).lower()
         new_dict[newkey] = a_dict[key]
                         
-    print("Type 'end' at any time to stop looking in the dictionary.")
+    print("\n[Type 'end' at any time to stop looking in the dictionary.]")
     
     exit = False
     
@@ -46,13 +46,14 @@ def lookup(subject):
 
         if a_key in new_dict:
             print(new_dict.get(a_key))
+            print("\n[Type 'end' at any time to stop looking in the dictionary.]")
 
-        elif a_key == 'end':
+        elif a_key.lower() == 'end':
             print("\nOkay, I've put away the dictionary.")
             exit = True
             
         else:
-            print("I don't seem to know that term. Please check your spelling and try again.")
+            print("\nI don't seem to know that term. Please check your spelling and try again.")
         
     
     

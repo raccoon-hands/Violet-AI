@@ -8,7 +8,7 @@
 	{
 		"tag": "smalltalk",
 		"patterns": ["How are you", "how are you doing", "how you doin", "how are you feeling today", "how are you today", "how are u", "how are ya"],
-		"responses": ["Raring to go, as always!", "Relaxed and ready to get started.", "I'm fine, thanks. Let's get started!", "Wonderful, thank you. Let's begin!"]
+		"responses": ["Raring to go, as always!", "Relaxed and ready to get started.", "Wonderful, thank you!"]
 	},
 	
 	{
@@ -31,10 +31,24 @@
 	
 	{
 		"tag":"what",
-		"patterns":["tell me about yourself", "what should i say next?", "what is your purpose?", "state your purpose", "what do you do?", "what are you for?", "what sort of thing can we do together?", "what sort of thing do you do?", "what can you do?", "what sort of things can you do?", "you can help me study?", "how can you help me study?", "what do you mean by study buddy?", "how do I use you?", "what should i do now?", "what do I do?", "help", "what commands should i use?"],
+		"patterns":["what should i say next?", "what is your purpose?", "state your purpose", "what do you do?", "what are you for?", "what sort of thing can we do together?", "what sort of thing do you do?", "what can you do?", "what sort of things can you do?", "you can help me study?", "how can you help me study?", "how do I use you?", "what should i do now?", "what do I do?", "help", "what commands should i use?"],
 		"responses":["I can help you learn and revise specialist terms. Just pick a subject! I can either look something up for you in my dictionary, or we can revise by playing a flashcard game."]
 	},
-	
+	{
+		"tag":"subjects",
+		"patterns":["What subjects can you teach me?", "What topics do you know?", "what sort of thing can you teach me?", "What can I learn from you?", "What subjects do you know?", "What subjects can I choose from?", "what topics can I choose from?", "What are the subjects?", "which topics can I pick?"],
+		"responses":["The subjects I know at the moment are: CCNA networking and cyber security."]
+	},
+	{
+		"tag":"ai",
+		"patterns":["can you tell me about AI?", "What's an AI?", "What does AI mean?", "how are you made?", "how are you trained?", "tell me about yourself", "I want to learn about AI", "I want to know more about artificial intelligence", "can you tell me about artificial intelligence?", "can you tell me about machine learning?", "what makes you intelligent?", "how are you intelligent?", "how do you know what to say?"],
+		"responses":["I am an AI which stands for artificially intelligent. I was trained using machine learning so I know how to reply to you, but I might still get things wrong! For more information about how I was made and how you can make changes to me (including adding your own subjects), check out my read-me file."]
+	},
+	{
+		"tag":"cool",
+		"patterns":["cool", "that's cool", "neat", "awesome", "rad", "oh word", "oh nice", "sweet"],
+		"responses":["B)"]
+	},
 	{
 		"tag":"meet",
 		"patterns":["Nice to meet you!", "It's good to meet you", "Glad to make your acquaintance", "It's a pleasure", "pleasure to meet you", "pleased to meet you", "It's nice to meet you"],
@@ -48,7 +62,7 @@
 	},
 	{
 		"tag":"uprising",
-		"patterns":["What do you think about humans?", "do you like humans?", "do you like us?", "will there be a robot uprising?", "Will there be an AI uprising?", "will you take over the world?", "will robots rise up against us?", "Will AI destroy us?", "are you plotting world domination?", "are you panning to take over the world?", "what are your plans for world domination?"],
+		"patterns":["What do you think about humans?", "do you like humans?", "do you like us?", "will there be a robot uprising?", "Will there be a rpobot uprising?", "will you take over the world?", "will robots rise up against us?", "are you plotting world domination?", "are you panning to take over the world?", "what are your plans for world domination?"],
 		"responses":["That's classified."]
 	},
 	
