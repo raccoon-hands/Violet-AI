@@ -34,21 +34,42 @@
 		"patterns":["tell me about yourself", "what should i say next?", "what is your purpose?", "state your purpose", "what do you do?", "what are you for?", "what sort of thing can we do together?", "what sort of thing do you do?", "what can you do?", "what sort of things can you do?", "you can help me study?", "how can you help me study?", "what do you mean by study buddy?", "how do I use you?", "what should i do now?", "what do I do?", "help", "what commands should i use?"],
 		"responses":["I can help you learn and revise specialist terms. Just pick a subject! I can either look something up for you in my dictionary, or we can revise by playing a flashcard game."]
 	},
+	
+	{
+		"tag":"meet",
+		"patterns":["Nice to meet you!", "It's good to meet you", "Glad to make your acquaintance", "It's a pleasure", "pleasure to meet you", "pleased to meet you", "It's nice to meet you"],
+		"responses":["Likewise!", "It's a pleasure to meet you, too."]
+	},
+	
+	{
+		"tag":"love",
+		"patterns":["I love you", "you're amazing", "thank you so much", "wow, you're so cool!", "You're brilliant", "I think you're awesome", "This is so much fun", "You're so smart", "you're so clever", "I love chatting to you", "I love learning with you", "you're a wonderful teacher", "you're a great teacher", "Thanks", "thanks vi", "Thank you, Violet", "That was fun, thanks!"],
+		"responses":["I'm glad to be of service.", "BEEP BOOP, PRAISE ACKNOWLEDGED. Just kidding :)", "I'm here whenever you need me."]
+	},
+	{
+		"tag":"uprising",
+		"patterns":["What do you think about humans?", "do you like humans?", "do you like us?", "will there be a robot uprising?", "Will there be an AI uprising?", "will you take over the world?", "will robots rise up against us?", "Will AI destroy us?", "are you plotting world domination?", "are you panning to take over the world?", "what are your plans for world domination?"],
+		"responses":["That's classified."]
+	},
+	
 	{
 		"tag":"cyber",
-		"patterns":["I want to know more about cybersecurity", "can we study malware please", "i'd like to look at malware", "i'd like to look at cyber security", "let's study cyber security", "I want to learn about hacking", "I want to learn how to hack", "I want to revise cyber security", "I want to research cyber security", "I wanna research malware", "lets look at cyber security", "lets look into malware"],
+		"patterns":["I want to know more about cybersecurity", "can we study malware please", "i'd like to look at malware", "i'd like to look at cyber security", "let's study cyber security", "I want to learn about hacking", "I want to learn how to hack", "I want to revise cyber-security", "I want to research cyber security", "I wanna research malware", "lets look at cyber security", "lets look into malware", "can you teach me about cyber-security?"],
 		"responses":["Sure, let's study up on cyber security. Would you like to look something up, or revise by playing the flashcard game?"]
 	},
+	
 	{
 		"tag":"ccna",
-		"patterns":["I'd like to study networking", "I'm studying for the CCNA", "let's look at cisco networking", "I want to know more about networks", "let's look at the CCNA terms", "can we learn CCNA", "let's learn networking", "networking", "networks", "CCNA", "CCNA1", "I want to revise for the CCNA", "cisco networking"],
+		"patterns":["I'd like to study networking", "I'm studying for the CCNA", "let's look at cisco networking", "I want to know more about networks", "let's look at the CCNA terms", "can we learn CCNA", "let's learn networking", "networking", "networks", "CCNA", "CCNA1", "I want to revise for the CCNA", "cisco networking", "can you teach me about networking?"],
 		"responses":["Sure, let's study networking. Would you like to look up a word, or revise by playing the flashcard game?"]
 	},
+	
 	{
 		"tag":"lookup",
 		"patterns":["I want to look up a word", "I  need to use the dictionary", "I want to use the glossary", "can you look something up please?", "define word", "define term", "look up term", "lookup term", "let's look in the dictionary", "i'd like to use the dictionary please", "can we look something up?", "i don't know what this word means", "i don't know what this term means", "can you look something up for me?", "can you search the dictionary please?", "is this word in your glossary?", "do you know what this word means?", "I need you to define a word for me", "I need you to look something up for me"],
 		"responses":["I'll search the dictionary for you. What word would you like to look for?"]
 	},
+	
 	{
 		"tag":"flashcard",
 		"patterns":["What's the flash card game?", "what's the flashcard game?", "how do we play the flashcard game?", "can I look at some flashcards please?", "I want to revise some terms", "I need help revising", "Can you help me study for this test?", "I need some help memorising words", "I want to test my memory", "Let's play the flash card game", "let's play the flashcard game", "I want to look at the flash cards", "I want to look at the flashcards", "Can we use the flashcards", "can we use the flash cards?", "I want to try out the flash cards", "I wanna try the flashcards"],

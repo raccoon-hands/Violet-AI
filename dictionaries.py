@@ -119,8 +119,7 @@ sensitive financial and personal information stored and processed through online
 system once executed.',\
 
 'Behavioral biometrics':'Behavioral biometrics is a biometric modality that dynamically analyzes and quantifies \
-unique identifiers and measurable human patterns. For more information, see this post on the use of behavioral \
-biometrics in the financial sector.',\
+unique identifiers and measurable human patterns.',\
 
 'Big data':'Big data pertains to huge datasets that can be analyzed computationally to reveal trends, patterns, \
 and associations. Companies use big data to improve their operations and make more intelligent decisions.',\

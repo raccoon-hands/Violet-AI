@@ -1,4 +1,7 @@
 #Building the actual chatbot
+
+print("Please wait a moment...")
+
 import json
 import pickle
 import numpy as np
@@ -21,7 +24,7 @@ words = pickle.load(open("words.pkl", "rb"))
 classes = pickle.load(open("classes.pkl", "rb"))
 
 model = load_model("chatbotmodel.h5")
-
+      
 def clean_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
@@ -43,7 +46,7 @@ def predict_class(sentence):
     
     #troubleshooting
     #bow = np.array(bow)
-    #bow = bow.reshape(-1, -1)
+    #bow = bow.reshape(-1, 1)
     
     res = model.predict(np.array([bow]), verbose=0)[0] #had to change this to
                                                     #verbose=0 to disable prog bar
@@ -95,7 +98,7 @@ def get_response(intents_list, intents_json):
             
     return result
 
-print("Violet is running. Say hello!")
+print("Ready. Say hello!")
 
 while True:
     #chat mode
